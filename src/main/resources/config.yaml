@@ -1,0 +1,12 @@
+server-pool:
+  serverGroups:
+    routing-url: /
+    load-balancing:
+      strategy: ROUND_ROBIN
+    health-checking:
+      strategy: PING
+    servers:
+      - ip: 192.168.0.1
+        port: 8080
+        health-check-url: /health-check
+        success-code: 200
